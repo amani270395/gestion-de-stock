@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id ="articleDao" class ="com.chaouachi.stock.dao.impl.ArticleDaoImpl"/>
+	<bean id="articleService" class="com.chaouachi.stock.services.impl.ArticleServiceImpl">
+		<property name="dao" ref="articleDao"></property>
+	</bean>
+	<bean id ="categoryDao" class ="com.chaouachi.stock.dao.impl.CategoryDaoImpl"/>
+	<bean id="categoryService" class="com.chaouachi.stock.services.impl.CategoryServiceImpl">
+		<property name="dao" ref="categoryDao"></property>
+	</bean>
+	<bean id ="clientDao" class ="com.chaouachi.stock.dao.impl.ClientDaoImpl"/>
+	<bean id="clientService" class="com.chaouachi.stock.services.impl.ClientServiceImpl">
+		<property name="dao" ref="clientDao"></property>
+	</bean>
+	<bean id ="commandeclientDao" class ="com.chaouachi.stock.dao.impl.CommandeClientDaoImpl"/>
+	<bean id="commandeclientService" class="com.chaouachi.stock.services.impl.CommandeClientServiceImpl">
+		<property name="dao" ref="commandeclientDao"></property>
+	</bean>
+	<bean id ="commandefournisseurDao" class ="com.chaouachi.stock.dao.impl.CommandeFournisseurDaoImpl"/>
+	<bean id="commandefournisseurService" class="com.chaouachi.stock.services.impl.CommandeFournisseurServiceImpl">
+		<property name="dao" ref="commandefournisseurDao"></property>
+	</bean>
+	<bean id ="fournisseurDao" class ="com.chaouachi.stock.dao.impl.FournisseurDaoImpl"/>
+	<bean id="fournisseurService" class="com.chaouachi.stock.services.impl.FournisseurServiceImpl">
+		<property name="dao" ref="fournisseurDao"></property>
+	</bean>
+	<bean id ="ligneCommandeClientDao" class ="com.chaouachi.stock.dao.impl.LigneCommandeClientDaoImpl"/>
+	<bean id="ligneCommandeClientService" class="com.chaouachi.stock.services.impl.LigneCommandeClientServiceImpl">
+		<property name="dao" ref="ligneCommandeClientDao"></property>
+	</bean>
+	<bean id ="ligneCommandeFournisseurDao" class ="com.chaouachi.stock.dao.impl.LigneCommandeFournisseurDaoImpl"/>
+	<bean id="ligneCommandeFournisseurService" class="com.chaouachi.stock.services.impl.LigneCommandeFournisseurServiceImpl">
+		<property name="dao" ref="ligneCommandeFournisseurDao"></property>
+	</bean>
+	<bean id ="ligneVenteDao" class ="com.chaouachi.stock.dao.impl.LigneVenteDaoImpl"/>
+	<bean id="ligneVenteService" class="com.chaouachi.stock.services.impl.LigneVenteServiceImpl">
+		<property name="dao" ref="ligneVenteDao"></property>
+	</bean>
+	<bean id ="mvtDeStockDao" class ="com.chaouachi.stock.dao.impl.MvtDeStockDaoImpl"/>
+	<bean id="mvtDeStockService" class="com.chaouachi.stock.services.impl.MvtDeStockServiceImpl">
+		<property name="dao" ref="mvtDeStockDao"></property>
+	</bean>
+	<bean id ="utilisateurDao" class ="com.chaouachi.stock.dao.impl.UtilisateurDaoImpl"/>
+	<bean id="utilisateurService" class="com.chaouachi.stock.services.impl.UtilisateurServiceImpl">
+		<property name="dao" ref="utilisateurDao"></property>
+	</bean>
+	<bean id ="venteDao" class ="com.chaouachi.stock.dao.impl.VenteDaoImpl"/>
+	<bean id="venteService" class="com.chaouachi.stock.services.impl.VenteServiceImpl">
+		<property name="dao" ref="venteDao"></property>
+	</bean>
+</beans>
